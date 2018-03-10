@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/fab_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sakegakoi.rambo.pat.Newgame"
+    tools:showIn="@layout/activity_newgame">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/scoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/score"
+                android:paddingEnd="@dimen/fab_margin"
+                android:text="@string/score"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/scoreText"
+                android:text="@string/_24"
+                android:textColor="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lifeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/lifeValue"
+                android:paddingEnd="@dimen/fab_margin"
+                android:text="@string/life"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/lifeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/lifeText"
+                android:text="@string/_24"
+                android:textColor="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/notification_large_icon_height"
+        android:layout_marginTop="@dimen/fab_margin">
+
+        <TextView
+            android:id="@+id/changeText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/headerHeight"
+            android:text="@string/textview" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/notification_large_icon_height"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:textAlignment="center">
+
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            style="@android:style/Widget.Material.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            android:textDirection="rtl"
+            android:tintMode="screen"
+            android:translationX="@dimen/imageHeight"
+            app:srcCompat="@android:drawable/ic_dialog_info" android:contentDescription="@string/todo" />
+    </TableRow>
+
+</android.widget.TableLayout>
