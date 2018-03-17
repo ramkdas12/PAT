@@ -10,13 +10,14 @@
     tools:showIn="@layout/activity_newgame">
 
     <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
         android:stretchColumns="*">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="168dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="left"
             android:layout_weight="1">
 
             <TextView
@@ -38,18 +39,16 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="103dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layoutDirection="rtl"
-            android:orientation="horizontal">
+            android:layout_gravity="right"
+            android:layout_weight="1">
 
             <TextView
                 android:id="@+id/lifeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/lifeValue"
-                android:paddingEnd="@dimen/fab_margin"
                 android:text="@string/life"
                 android:textColor="@color/colorPrimaryDark" />
 
@@ -57,7 +56,8 @@
                 android:id="@+id/lifeValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@id/lifeText"
+                android:layout_toEndOf="@+id/lifeText"
+                android:layout_toRightOf="@id/lifeText"
                 android:text="@string/_24"
                 android:textColor="@color/colorPrimary" />
 
@@ -86,16 +86,72 @@
 
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/infoButton"
             style="@android:style/Widget.Material.ImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
+            android:contentDescription="@string/todo"
             android:textAlignment="center"
             android:textDirection="rtl"
             android:tintMode="screen"
-            android:translationX="@dimen/imageHeight"
-            app:srcCompat="@android:drawable/ic_dialog_info" android:contentDescription="@string/todo" />
+            app:srcCompat="@android:drawable/ic_dialog_info" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/notification_large_icon_height"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hundredDP"
+            android:width="@dimen/buttonSize"
+            android:text="@string/textview" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/notification_large_icon_height"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/place" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/notification_large_icon_height"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/animal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/animal" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/notification_large_icon_height"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/thing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/thing" />
     </TableRow>
 
 </android.widget.TableLayout>
