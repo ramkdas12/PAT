@@ -7,6 +7,9 @@
     <string name="title_activity_high_score">HighScoreActivity</string>
     <string name="score">Score : </string>
     <string name="life">Life : </string>
+    <string name="place">Place</string>
+    <string name="animal">Animal</string>
+    <string name="thing">Thing</string>
     <string name="initialScore">0</string>
     <string name="lifeScore">3</string>
     <string name="fly">Place</string>

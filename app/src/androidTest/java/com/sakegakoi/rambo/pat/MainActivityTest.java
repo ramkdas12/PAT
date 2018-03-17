@@ -12,10 +12,11 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isClickable;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -39,11 +40,21 @@ public class MainActivityTest {
 
     @Test
     public void checkPlayGameDisplayed() {
-        onView(withId(R.id.newGame)).check(matches(isDisplayed()));
+        onView(withId(R.id.newGame)).check(matches(isDisplayed())).check(matches(withText(R.string.newGameText)));
     }
 
     @Test
     public void checkHighScoreDisplayed() {
         onView(withId(R.id.highScore)).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void checkoutNewActivity() {
+        onView(withId(R.id.newGame)).check(matches(isClickable()));
+    }
+
+    @Test
+    public void checkoutHighScoreActivity() {
+        onView(withId(R.id.highScore)).check(matches(isClickable()));
     }
 }
